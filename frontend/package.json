@@ -1,0 +1,54 @@
+{
+  "name": "parcel-html-sass-js-starter-template",
+  "version": "0.1.0",
+  "description": "Starter template for building static web apps with HTML partials, SASS, and JavaScript.",
+  "scripts": {
+    "clean": "rimraf dist .../statics",
+    "start-w": "npm run clean && parcel serve ./src/*.html --open --port 32101",
+    "build-w": "npm run clean && parcel build ./src/*.html --public-url ./ --dist-dir ../statics && node postbuild.js",
+    "start": "rm -rf dist && rm -rf .parcel-cache && rm -rf .parcel && npm run clean && parcel serve ./src/*.html --open --port 32101",
+    "build": "rm -rf ../statics && rm -rf .parcel-cache && rm -rf .parcel && npm run clean && parcel build ./src/*.html --public-url ./ --dist-dir ../statics && node postbuild.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Cyberbase",
+  "license": "MIT",
+  "devDependencies": {
+    "@parcel/packager-raw-url": "2.8.3",
+    "@parcel/transformer-sass": "^2.5.0",
+    "@parcel/transformer-webmanifest": "2.8.3",
+    "jquery-lazy": "^1.7.11",
+    "jquery-match-height": "^0.7.2",
+    "parcel": "^2.7.0",
+    "parcel-namer-rewrite": "^2.0.0-rc.3",
+    "parcel-namer-without-hash": "^0.0.1",
+    "posthtml-include": "^1.7.3",
+    "rimraf": "^3.0.2",
+    "sharp": "^0.31.3",
+    "wow.js": "^1.2.2"
+  },
+  "dependencies": {
+    "@rive-app/canvas": "^1.0.98",
+    "aos": "^2.3.4",
+    "fs": "^0.0.1-security",
+    "fs-extra": "^10.1.0",
+    "jquery": "^3.6.0",
+    "lazyload": "^2.0.0-rc.2",
+    "lazysizes": "^5.3.2",
+    "lodash.escaperegexp": "^4.1.2",
+    "lozad": "^1.16.0",
+    "path": "^0.12.7",
+    "replace-in-file": "^6.3.5",
+    "swiper": "^8.1.4"
+  },
+  "source": "src/index.html",
+  "parcel-namer-rewrite": {
+    "silent": true,
+    "chain": "@parcel/namer-default",
+    "hashing": "never",
+    "rules": {
+      "frontend.html": "index.html",
+      "(.*).css": "styles.css",
+      "^(?!.*(frontend)).*js": "scripts.js"
+    }
+  }
+}

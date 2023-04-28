@@ -1,0 +1,17 @@
+@import "./styles/core/_normalize";
+
+/*! purgecss start ignore */
+@import "./styles/tools/_var";
+@import "./styles/tools/_breakpoint";
+@import "./styles/tools/_px-to-rem";
+@import "./styles/tools/_respond-to";
+/*! purgecss end ignore */
+
+/*plugin*/
+@import '../node_modules/swiper/swiper-bundle.css';
+@import '../node_modules/aos/dist/aos.css';
+@import '../node_modules/wow.js/css/libs/animate.css';
+/*end plugin*/
+
+@import "./styles/components/_header";
+@import "./styles/components/_footer";

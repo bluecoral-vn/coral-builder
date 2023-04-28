@@ -1,0 +1,11 @@
+$respond-to-no-mediaqueries-fallback: phone;
+$respond-to-fallback-class: lt-ie9;
+$respond-to-breakpoints: (
+  xxlarge "screen and (min-width: 1440px)",
+  xlarge "screen and (min-width: 1280px)",
+  large "screen and (min-width: 1024px)",
+  medium "screen and (min-width: 768px)",
+  xxsmall "screen and (min-width: 640px)",
+  xsmall "screen and (min-width: 480px)",
+  ip6 "screen and (min-width: 375px)"
+);
